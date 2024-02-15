@@ -6,7 +6,7 @@
   tasks:
     - name: Pull Docker Image
       docker_image:
-        name: "ume950/Calculator"
+        name: "umeshjaware/Calculator"
         source: pull
       register: docker_pull_result
 
@@ -19,4 +19,4 @@
         name: docker
         state: started
     - name: Running container
-      shell: docker run -it -d --name calculator ume950/Calculator
+      shell: docker run -it -d --name calculator umeshjaware/Calculator
