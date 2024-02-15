@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = 'Calculator'
-        GITHUB_REPO_URL = 'https://github.com/ume950/Calculator.git'
+        DOCKER_IMAGE_NAME = 'calculator'
+        GITHUB_REPO_URL = 'https://github.com/ume950/calculator.git'
     }
 
     stages {
@@ -29,8 +29,8 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag calculator umeshjaware/Calculator:latest'
-                    sh 'docker push umeshjaware/Calculator'
+                    sh 'docker tag calculator umeshjaware/calculator:latest'
+                    sh 'docker push umeshjaware/calculator'
                     }
                  }
             }
