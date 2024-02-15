@@ -5,7 +5,7 @@ FROM gcc:latest
 WORKDIR /app
 
 # Copy the calculator.cpp file from the current directory to the container's /app directory
-COPY calculator.cpp /calculator.cpp
+COPY calculator.cpp /app/calculator.cpp
 
 # Compile the calculator.cpp file using g++
 RUN g++ -o calculator calculator.cpp
